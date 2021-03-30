@@ -1,4 +1,5 @@
-import spark.implicits._
+val spark2 = spark
+import spark2.implicits._
 
 case class Person(name: String, age: Long)
 
