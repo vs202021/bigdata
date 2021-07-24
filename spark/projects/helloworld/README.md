@@ -3,10 +3,10 @@
 This is just a simple project which can be used as a starting skelton to start with sbt and spark-submit
 
 1. Clone the repository:
-
+```
 	git clone https://github.com/cloudxlab/bigdata.git
 	cd bigdata/spark/projects/helloworld
-
+```
 2. To run follow these steps:
 
 	+ sbt package
