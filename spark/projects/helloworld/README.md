@@ -22,7 +22,7 @@ It should display something like:
 
 If you get an error like this:
 
-_**hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://cxln1.c.thelab-240901.internal:8020/user/sandeep/big_copy_spark already exists
+_** hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://cxln1.c.thelab-240901.internal:8020/user/sandeep/big_copy_spark already exists
 	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
 	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1191)
 	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply(PairRDDFunctions.scala:1168)
