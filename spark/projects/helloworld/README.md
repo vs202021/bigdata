@@ -21,9 +21,7 @@ It should display something like:
 
 
 If you get an error like this:
-
-_
-** 
+---
 hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://cxln1.c.thelab-240901.internal:8020/user/sandeep/big_copy_spark already exists
 	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
 	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1191)
@@ -34,8 +32,7 @@ hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://cxln1.c.thelab
 	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
 	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1168)
 	
-**
-_
+---
 It is because the output direcory is already existing, please delete the output folder in HDFS using:
 
 	hadoop fs -rmr big_copy_spark
