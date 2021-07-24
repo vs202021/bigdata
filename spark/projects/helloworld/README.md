@@ -37,4 +37,5 @@ It is because the output direcory is already existing, please delete the output 
 
 	hadoop fs -rmr big_copy_spark
 
+Please check to learn more: https://cloudxlab.com/assessment/playlist-intro/18/project-writing-spark-applications
 
