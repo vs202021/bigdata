@@ -17,13 +17,13 @@ class Utils extends Serializable {
         return (ip.toString)
     }
 
-    var cleanips = ipaccesslogs.map(extractIP(_)).filter(isClassA)
 
     
     def gettop10(accessLogs:RDD[String], sc:SparkContext, topn:Int):Array[(String,Int)] = {
         //Keep only the lines which have IP
         var ipaccesslogs = accessLogs.filter(containsIP)
         var cleanips = ipaccesslogs.map(extractIP(_))
+        var cleanips = ipaccesslogs.map(extractIP(_)).filter(isClassA)
         var ips_tuples = cleanips.map((_,1));
         var frequencies = ips_tuples.reduceByKey(_ + _);
         var sortedfrequencies = frequencies.sortBy(x => x._2, false)
