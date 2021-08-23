@@ -27,6 +27,10 @@ class Utils extends Serializable {
     }
 }
 
+def isClassA(ip:String):Boolean = {
+    ip.split('.')(0).toInt < 127
+}
+
 object EntryPoint {
     val usage = """
         Usage: EntryPoint <how_many> <file_or_directory_in_hdfs>
