@@ -18,6 +18,7 @@ class Utils extends Serializable {
 
     var cleanips = ipaccesslogs.map(extractIP(_)).filter(isClassA)
 
+    
     def gettop10(accessLogs:RDD[String], sc:SparkContext, topn:Int):Array[(String,Int)] = {
         //Keep only the lines which have IP
         var ipaccesslogs = accessLogs.filter(containsIP)
