@@ -31,9 +31,6 @@ class Utils extends Serializable {
     }
 }
 
-def isClassA(ip:String):Boolean = {
-    ip.split('.')(0).toInt < 127
-}
 
 object EntryPoint {
     val usage = """
