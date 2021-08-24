@@ -17,6 +17,9 @@ class Utils extends Serializable {
         return (ip.toString)
     }
 
+    def isClassA(ip:String):Boolean = {
+    ip.split('.')(0).toInt < 127
+    }
 
     
     def gettop10(accessLogs:RDD[String], sc:SparkContext, topn:Int):Array[(String,Int)] = {
